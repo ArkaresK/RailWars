@@ -6,15 +6,17 @@ public class Travel {
     public float price;
     public float distance;
     public String timeTravel;
+    public String transport;
     public int traveller;
     public String Type;
 
-    public Travel(String LeavingFrom, String GoingTo, float price, float distance, String timeTravel){
+    public Travel(String LeavingFrom, String GoingTo, float price, float distance, String timeTravel, String transport){
         this.LeavingFrom = LeavingFrom;
         this.GoingTo = GoingTo;
         this.price = price;
         this.distance = distance;
         this.timeTravel = timeTravel;
+        this.transport = transport;
     }
 
     public float getPrice() {

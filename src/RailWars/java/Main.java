@@ -1,20 +1,18 @@
 package RailWars.java;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.*;
 import org.json.simple.parser.ParseException;
+
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException, ParseException, FileNotFoundException {
+    public static void main(String[] args) throws IOException, ParseException {
         TravelList ListTravel = new TravelList();
-        String filePath = "C:\\Users\\Calvin\\IdeaProjects\\Rail Wars\\src\\RailWars\\java\\DataTravel.json";
+        String filePath = "C:\\Users\\Calvin\\IdeaProjects\\Rail Wars\\src\\RailWars\\json\\DataTravel.json";
 
 
 
@@ -24,18 +22,24 @@ public class Main {
         System.out.println(jsonObject+"\n\n\n");
 
         JSONArray array = (JSONArray) jsonObject.get("Travel");
-        for(int i=0;i<array.size();i++){
-            JSONObject Travel=(JSONObject) array.get(i);
-            String from= (String) Travel.get("from");
+        for (Object o : array) {
+            JSONObject Travel = (JSONObject) o;
+            String from = (String) Travel.get("from");
             String to = (String) Travel.get("to");
             String time = (String) Travel.get("time");
             Long distance = (Long) Travel.get("distance");
             Long price = (Long) Travel.get("price");
-            Travel TravelTemp = new Travel(from,to,price,distance,time);
+            String transport = (String) Travel.get("transport");
+            Travel TravelTemp = new Travel(from, to, price, distance, time, transport);
             ListTravel.add(TravelTemp);
         }
+        System.out.println(ListTravel);
         System.out.println(ListTravel.toString());
         System.out.println(ListTravel.compareTo("Paris","London"));
+        System.out.println(ListTravel.selectByTransport("bus"));
+        System.out.println(ListTravel.compareByTransport("Paris","London","airplane"));
+        System.out.println(ListTravel.travelFrom("P aris"));
+
 
 
 

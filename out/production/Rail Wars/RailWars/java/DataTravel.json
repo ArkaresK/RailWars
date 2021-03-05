@@ -3,76 +3,95 @@
     {
       "from": "Paris",
       "to" : "London",
-      "time" : "5 hours",
+      "time" : "4 hours 48",
       "distance" : 469,
-      "price" : 185
+      "price" : 185,
+      "transport" : "train"
     },
     {
       "from": "Paris",
       "to" : "London",
-      "time" : "10 hours",
+      "time" : "5 hours 40",
       "distance" : 469,
-      "price" : 105
+      "price" : 105,
+      "transport" : "bus"
     },{
       "from": "Paris",
       "to" : "London",
-      "time" : "2 hours 30",
+      "time" : "1 hours 10",
       "distance" : 469,
-      "price" : 267
+      "price" : 267,
+      "transport" : "airplane"
     },{
       "from": "Paris",
       "to" : "Berlin",
       "time" : "2 hours 26",
       "distance" : 764,
-      "price" : 237
+      "price" : 237,
+      "transport" : "airplane"
     },{
       "from": "Paris",
       "to" : "Berlin",
       "time" : "5 hours 12",
       "distance" : 469,
-      "price" : 143
+      "price" : 143,
+      "transport" : "train"
     },{
       "from": "Paris",
       "to" : "Berlin",
       "time" : "9 hours 34",
       "distance" : 469,
-      "price" : 86
+      "price" : 86,
+      "transport" : "bus"
     },{
       "from": "Paris",
       "to" : "Strasbourg",
       "time" : "4 hours 55",
       "distance" : 491,
-      "price" : 43
+      "price" : 43,
+      "transport" : "bus"
     },{
       "from": "Paris",
       "to" : "Strasbourg",
       "time" : "2 hours 9",
       "distance" : 491,
-      "price" : 76
+      "price" : 46,
+      "transport" : "train"
     },{
       "from": "Paris",
       "to" : "Bruxelles",
       "time" : "3 hours 24",
       "distance" : 312,
-      "price" : 38
+      "price" : 38,
+      "transport" : "bus"
     },{
       "from": "Paris",
       "to" : "Bruxelles",
       "time" : "5 hours 18",
       "distance" : 312,
-      "price" : 105
+      "price" : 105,
+      "transport" : "train"
     },{
       "from": "Paris",
       "to" : "Amsterdam",
       "time" : "5 hours 23",
       "distance" : 506,
-      "price" : 56
+      "price" : 56,
+      "transport" : "bus"
     },{
       "from": "Paris",
       "to" : "Amsterdam",
       "time" : "7 hours 54",
       "distance" : 506,
-      "price" : 124
+      "price" : 124,
+      "transport" : "train"
+    },{
+      "from": "Paris",
+      "to" : "Amsterdam",
+      "time" : "1 hours 15",
+      "distance" : 506,
+      "price" : 174,
+      "transport" : "airplane"
     }
   ],
   "LeavingFrom" : [
