@@ -14,12 +14,10 @@ public class Main {
         TravelList ListTravel = new TravelList();
         String filePath = "C:\\Users\\Calvin\\IdeaProjects\\Rail Wars\\src\\RailWars\\json\\DataTravel.json";
 
-
-
         FileReader reader = new FileReader(filePath);
         JSONParser jsonParser = new JSONParser();
         JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
-        System.out.println(jsonObject+"\n\n\n");
+        System.out.println(jsonObject+"\n");
 
         JSONArray array = (JSONArray) jsonObject.get("Travel");
         for (Object o : array) {
@@ -38,21 +36,7 @@ public class Main {
         System.out.println(ListTravel.compareTo("Paris","London"));
         System.out.println(ListTravel.selectByTransport("bus"));
         System.out.println(ListTravel.compareByTransport("Paris","London","airplane"));
-        System.out.println(ListTravel.travelFrom("P aris"));
+        System.out.println(ListTravel.travelFrom("Paris"));
 
-
-
-
-    }/*
-        Travel Travel1 = new Travel("Paris","London",185,469.6f,"5 hours");
-        Travel Travel2 = new Travel("Paris","London",105,469.6f,"10 hours");
-        Travel Travel3 = new Travel("Paris","London",275,469.6f,"2 hours 30");
-        ListTravel.add(Travel1);
-        ListTravel.add(Travel2);
-        ListTravel.add(Travel3);
-        System.out.println("Output");
-        System.out.println(Travel1.getPrice());
-        System.out.println(ListTravel.toString());
-        System.out.println(ListTravel.compareTo("Paris","London"));
-    }*/
+    }
 }
