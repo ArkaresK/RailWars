@@ -7,8 +7,6 @@ public class Travel {
     public float distance;
     public String timeTravel;
     public String transport;
-    public int traveller;
-    public String Type;
 
     public Travel(String LeavingFrom, String GoingTo, float price, float distance, String timeTravel, String transport){
         this.LeavingFrom = LeavingFrom;

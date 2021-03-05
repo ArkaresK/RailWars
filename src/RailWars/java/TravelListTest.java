@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(MockitoJUnitRunner.class)
 class TravelListTest {
@@ -21,7 +21,7 @@ class TravelListTest {
 
     private static TravelList testList ;
 
-    @BeforeAll static void setup() throws IOException, ParseException {
+    @BeforeAll static void setup() {
         mainList = new TravelList();
         Travel Travel1 = new Travel("Paris","London",185,469.6f,"5 hours","train");
         Travel Travel2 = new Travel("Madrid","Paris",105,469.6f,"10 hours","bus");
@@ -40,8 +40,8 @@ class TravelListTest {
     }
     @Test
     public void containsTest(){
-        assertEquals(true,mainList.contains("Paris"));
-        assertEquals(false,mainList.contains("Hong Kong"));
-        assertEquals(true,mainList.contains("London"));
+        assertTrue(mainList.contains("Paris"));
+        assertFalse(mainList.contains("Hong Kong"));
+        assertTrue(mainList.contains("London"));
     }
 }
