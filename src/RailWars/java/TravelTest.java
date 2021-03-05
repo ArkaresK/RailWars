@@ -23,9 +23,6 @@ class TravelTest {
 
     @Test
     public void travel_price() {
-        //prepare
-        //call
-        //verify
         assertEquals(367,firstTravel.getPrice());
     }
 }
