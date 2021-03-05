@@ -12,6 +12,14 @@ public class TravelList {
             totalTravel ++;
         }
     }
+    public boolean contains(String destination){
+        for (int i = 0; i < totalTravel; i++) {
+            if (destination.equals(list[i].LeavingFrom) || destination.equals(list[i].GoingTo)) {
+                return true;
+            }
+        }
+        return false;
+    }
     public String toString(){
         StringBuilder s= new StringBuilder();
         s.append(totalTravel > 2 ? totalTravel + " Travels :\n" : totalTravel + " Travel :\n");

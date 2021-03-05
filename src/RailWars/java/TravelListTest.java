@@ -33,12 +33,15 @@ class TravelListTest {
 
     @Test
     public void travelFromTest() {
-        //prepare
-        //call
         String s = "Result for research travel from Paris :\n" +
                 " - Paris to London for 185.0€ in 5 hours (469.6 km) by train\n";
-        //verify
         assertEquals(s,mainList.travelFrom("Paris"));
         /*assertEquals(new Travel("Paris","London",185,469.6f,"5 hours","train"),mainList.travelFrom("London"));*/
+    }
+    @Test
+    public void containsTest(){
+        assertEquals(true,mainList.contains("Paris"));
+        assertEquals(false,mainList.contains("Hong Kong"));
+        assertEquals(true,mainList.contains("London"));
     }
 }

@@ -37,6 +37,7 @@ public class Main {
         System.out.println(ListTravel.selectByTransport("bus"));
         System.out.println(ListTravel.compareByTransport("Paris","London","airplane"));
         System.out.println(ListTravel.travelFrom("Paris"));
+        System.out.println(ListTravel.contains("Paris"));
 
     }
 }
